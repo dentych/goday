@@ -10,5 +10,18 @@ services:
 
   james:
     build: james
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DBNAME: goday
     ports:
       - 8081:8081
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: goday
+    ports:
+      - 5432:5432

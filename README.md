@@ -15,3 +15,12 @@ james ->+ db: save
 db -->- james: done  
 james -->- archive: done  
 archive  -->- downloader: done  
+
+# TO DO
+
+1. Automatic database migrations
+1. BUILD SERVER :D
+1. Better code
+    1. Better error handling
+    1. Better code structure
+    1. Just... better code

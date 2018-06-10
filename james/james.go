@@ -10,6 +10,7 @@ import (
 	"log"
 
 	_ "github.com/lib/pq"
+	"os"
 )
 
 type PostBody struct {
@@ -43,8 +44,12 @@ func post(w http.ResponseWriter, r *http.Request) {
 
 // Save persists strings hash and location to mssql database
 func Save(hash, filename string) bool {
-
-	db, err := sql.Open("postgres", "host=tychsen.me user=postgres password=secretpassword dbname=goday sslmode=disable")
+	host := os.Getenv("POSTGRES_HOST")
+	user := os.Getenv("POSTGRES_USER")
+	password := os.Getenv("POSTGRES_PASSWORD")
+	dbname := os.Getenv("POSTGRES_DBNAME")
+	conString := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=disable", host, user, password, dbname)
+	db, err := sql.Open("postgres", conString)
 	if err != nil {
 		log.Fatal("Couldn't open DB connection:", err)
 		return false
