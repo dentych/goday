@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/dentych/goday/apprication/archiver"
 	"github.com/dentych/goday/apprication/downloader"
 	"github.com/gorilla/mux"
-	"github.com/dentych/goday/apprication/archiver"
 )
 
 type postBody struct {
@@ -17,9 +17,12 @@ type postBody struct {
 	Password string
 }
 
-func StartApi() {
+// StartAPI starts the server
+func StartAPI() {
+	fmt.Println("Starting api...")
 	router := mux.NewRouter()
 	router.HandleFunc("/", post)
+	fmt.Println("Server listening on port :8080")
 	http.ListenAndServe(":8080", router)
 }
 
