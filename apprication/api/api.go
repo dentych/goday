@@ -8,6 +8,7 @@ import (
 	"github.com/dentych/goday/apprication/archiver"
 	"github.com/dentych/goday/apprication/downloader"
 	"github.com/gorilla/mux"
+	"log"
 )
 
 type postBody struct {
@@ -23,7 +24,7 @@ func StartAPI() {
 	router := mux.NewRouter()
 	router.HandleFunc("/", post)
 	fmt.Println("Server listening on port :8080")
-	http.ListenAndServe(":8080", router)
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
 func post(w http.ResponseWriter, r *http.Request) {

@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  apprication:
+    build: apprication
+    environment:
+      JAMES_URL: http://james:8081
+    ports:
+      - 8080:8080
+
+  james:
+    build: james
+    ports:
+      - 8081:8081

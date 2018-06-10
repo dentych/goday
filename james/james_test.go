@@ -1,4 +1,4 @@
-package james
+package main
 
 import (
 	"testing"
