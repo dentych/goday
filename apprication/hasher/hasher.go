@@ -9,6 +9,7 @@ import (
 func Hash(s string) string {
 	fmt.Println("Hashing string:", s)
 	hash := sha256.Sum256([]byte(s))
-	fmt.Println("Created hash", hash)
-	return s
+	niceHash := fmt.Sprintf("%x", hash)
+	fmt.Println("Created hash:", hash)
+	return niceHash
 }
