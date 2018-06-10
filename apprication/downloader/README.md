@@ -1,0 +1,3 @@
+# goday
+
+Best day ever
