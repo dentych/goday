@@ -675,11 +675,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj",
+      "projectUniqueName": "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj",
       "projectName": "GDB.Model",
-      "projectPath": "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj",
+      "projectPath": "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj",
       "packagesPath": "C:\\Users\\norgaard\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Model\\obj\\",
+      "outputPath": "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

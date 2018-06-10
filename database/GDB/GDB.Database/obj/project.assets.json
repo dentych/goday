@@ -3598,11 +3598,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Database\\GDB.Database.csproj",
+      "projectUniqueName": "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Database\\GDB.Database.csproj",
       "projectName": "GDB.Database",
-      "projectPath": "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Database\\GDB.Database.csproj",
+      "projectPath": "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Database\\GDB.Database.csproj",
       "packagesPath": "C:\\Users\\norgaard\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Database\\obj\\",
+      "outputPath": "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Database\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3621,8 +3621,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj": {
-              "projectPath": "C:\\Users\\norgaard\\Documents\\Git\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj"
+            "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj": {
+              "projectPath": "c:\\Users\\norgaard\\go\\src\\github.com\\dentych\\goday\\database\\GDB\\GDB.Model\\GDB.Model.csproj"
             }
           }
         }
