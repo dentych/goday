@@ -2,8 +2,9 @@ package james
 
 import (
 	"database/sql"
-	_ "github.com/lib/pq"
 	"log"
+
+	_ "github.com/lib/pq"
 )
 
 // Save persists strings hash and location to mssql database

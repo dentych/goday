@@ -1,28 +1,20 @@
 package main
 
 import (
+	"sync"
+
 	"github.com/dentych/goday/apprication/api"
+	"github.com/dentych/goday/james"
 )
 
+var wg sync.WaitGroup
+
 func main() {
-	api.StartApi()
-	//buf := make([]byte, 20)
-	//for {
-	//	read, err := res.Read(buf)
-	//	if read > 0 {
-	//		fmt.Println("Amount read: ", read)
-	//		//fmt.Println("Text:", string(buf))
-	//	} else {
-	//		fmt.Println("Such empty")
-	//	}
-	//
-	//	if err != nil {
-	//		fmt.Printf("%T\n", err)
-	//		fmt.Println(err.Error())
-	//		if err == io.EOF {
-	//			fmt.Println("End of line met!")
-	//		}
-	//		break
-	//	}
-	//}
+	wg.Add(2)
+	go api.StartAPI()
+	wg.Done()
+	go james.StartAPI()
+	wg.Done()
+
+	wg.Wait()
 }
