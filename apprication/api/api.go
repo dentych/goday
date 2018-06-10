@@ -1,4 +1,4 @@
-package main
+package api
 
 import (
 	"encoding/json"
@@ -7,6 +7,7 @@ import (
 
 	"github.com/dentych/goday/apprication/downloader"
 	"github.com/gorilla/mux"
+	"github.com/dentych/goday/apprication/archiver"
 )
 
 type postBody struct {
@@ -16,7 +17,7 @@ type postBody struct {
 	Password string
 }
 
-func main() {
+func StartApi() {
 	router := mux.NewRouter()
 	router.HandleFunc("/", post)
 	http.ListenAndServe(":8080", router)
@@ -31,5 +32,7 @@ func post(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Decode failed:", err)
 	}
 
-	downloader.DownloadFile(body.Host, body.Username, body.Username, body.Password)
+	res := downloader.DownloadFile(body.Host, body.Username, body.Password, body.Path)
+	defer res.Close()
+	archiver.Archive(body.Path, res)
 }

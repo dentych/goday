@@ -2,25 +2,31 @@ package james
 
 import (
 	"database/sql"
-	"fmt"
-
-	_ "github.com/denisenkom/go-mssqldb"
+	_ "github.com/lib/pq"
+	"log"
 )
 
 // Save persists strings hash and location to mssql database
-func Save(hash, location string) bool {
+func Save(hash, filename string) bool {
 
-	db, err := sql.Open("mssql", "server=(localdb)\\mssqllocaldb;database=go")
+	db, err := sql.Open("postgres", "host=tychsen.me user=postgres password=secretpassword dbname=goday sslmode=disable")
 	if err != nil {
-		fmt.Println("Unable to connect to db:", err)
+		log.Fatal("Couldn't open DB connection:", err)
 		return false
 	}
 	err = db.Ping()
 	if err != nil {
-		fmt.Println("Pinging db failed:", err)
+		log.Fatal("Failed to ping DB:", err)
 		return false
 	}
 	defer db.Close()
 
-	return false
+	query := `INSERT INTO files (hash, filename) VALUES ($1, $2)`
+	_, err = db.Exec(query, hash, filename)
+	if err != nil {
+		log.Fatal("Could not insert into database:", err)
+		return false
+	}
+
+	return true
 }
