@@ -11,6 +11,6 @@ func TestSave(t *testing.T) {
 	result := Save(hash, location)
 
 	if result == false {
-		t.Errorf("You done goofed, son!")
+		t.Error()
 	}
 }

@@ -3,25 +3,24 @@ package james
 import (
 	"database/sql"
 	"fmt"
-)
 
-// GoFile represents database row
-type GoFile struct {
-	hash     string
-	location string
-}
+	_ "github.com/denisenkom/go-mssqldb"
+)
 
 // Save persists strings hash and location to mssql database
 func Save(hash, location string) bool {
-	db, err := sql.Open("mssql", "localhost")
+
+	db, err := sql.Open("mssql", "server=(localdb)\\mssqllocaldb;database=go")
 	if err != nil {
-		fmt.Println("Unable to connect to db", err)
+		fmt.Println("Unable to connect to db:", err)
+		return false
 	}
-	rows := db.QueryRow("SELECT * FROM dbo.GoFiles")
+	err = db.Ping()
+	if err != nil {
+		fmt.Println("Pinging db failed:", err)
+		return false
+	}
+	defer db.Close()
 
-	file := new(GoFile)
-	rows.Scan(&file.hash, &file.location)
-
-	fmt.Println(hash, location)
 	return false
 }
