@@ -1,0 +1,9 @@
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\bin\Debug\netcoreapp2.1\GDB.Model.deps.json
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\bin\Debug\netcoreapp2.1\GDB.Model.dll
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\bin\Debug\netcoreapp2.1\GDB.Model.pdb
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\obj\Debug\netcoreapp2.1\GDB.Model.csprojResolveAssemblyReference.cache
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\obj\Debug\netcoreapp2.1\GDB.Model.csproj.CoreCompileInputs.cache
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\obj\Debug\netcoreapp2.1\GDB.Model.AssemblyInfoInputs.cache
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\obj\Debug\netcoreapp2.1\GDB.Model.AssemblyInfo.cs
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\obj\Debug\netcoreapp2.1\GDB.Model.dll
+C:\Users\norgaard\Documents\Git\goday\database\GDB\GDB.Model\obj\Debug\netcoreapp2.1\GDB.Model.pdb
