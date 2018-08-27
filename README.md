@@ -16,11 +16,10 @@ db -->- james: done
 james -->- archive: done  
 archive  -->- downloader: done  
 
-# TO DO
+# To do (future work)
 
 1. Automatic database migrations
-1. BUILD SERVER :D
-1. Better code
+1. Setup automatic build and deployment on a build server
+1. Cleanup code
     1. Better error handling
     1. Better code structure
-    1. Just... better code
